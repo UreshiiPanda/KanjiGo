@@ -13,7 +13,7 @@ function HomePage() {
                         Select the Kanji Go tab to begin memorizing Kanji based on JLPT section
                     </li>
                     <li>
-                        In the Kanji List tab you can add, edit, and delete Kanji in your personal Kanji list which is also organized by JLPT section and will list your Kanji alphabetically &#40;alphabetical by romaji&#41;
+                        In the Kanji List tab you can add, edit, and delete Kanji in your personal Kanji list which is organized by JLPT section
                     </li>
                     <li>
                         In the Kanji Go tab you can make use of OpenAI's Dall-E program by searching for a picture to match up with your 
