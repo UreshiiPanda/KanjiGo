@@ -167,7 +167,7 @@ function ContactPage() {
                                 id="checkboxReadingField"
                                 type="checkbox" 
                                 value="Reading"
-                                onChange={e => setCheckbox1(e.target.value)}
+                                onChange={e => e.target.checked ? setCheckbox1(e.target.value) : setCheckbox1(null)}
                                 name="checkboxField"
                                 tabIndex="4"
                             />
@@ -178,7 +178,7 @@ function ContactPage() {
                                 id="checkboxAnimeField"
                                 type="checkbox" 
                                 value="Anime"
-                                onChange={e => setCheckbox2(e.target.value)}
+                                onChange={e => e.target.checked ? setCheckbox2(e.target.value) : setCheckbox2(null)}
                                 name="checkboxField" 
                                 tabIndex="5"
                             />
@@ -189,7 +189,7 @@ function ContactPage() {
                                 id="checkboxExchangeField"
                                 type="checkbox" 
                                 value="Language Exchange"
-                                onChange={e => setCheckbox3(e.target.value)}
+                                onChange={e => e.target.checked ? setCheckbox3(e.target.value) : setCheckbox3(null)}
                                 name="checkboxField" 
                                 tabIndex="6"
                             />
@@ -200,7 +200,7 @@ function ContactPage() {
                                 id="checkboxAppsField"
                                 type="checkbox" 
                                 value="Apps"
-                                onChange={e => setCheckbox4(e.target.value)}
+                                onChange={e => e.target.checked ? setCheckbox4(e.target.value) : setCheckbox4(null)}
                                 name="checkboxField" 
                                 tabIndex="7"
                             />
