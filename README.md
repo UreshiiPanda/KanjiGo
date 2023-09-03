@@ -17,7 +17,7 @@
 This app has one main purpose - to help Japanese learners memorize their Kanji. Here learners can memorize
 their Kanji based on JLPT (Japanese language proficiency test) section since each section has its own 
 Document in the DB. Users can create, edit, and delete Kanji in their own personal Kanji lists. Users can
-also try out OpenAI's Dall-E program to generate pictures which help them match a image to a given Kanji for
+also try out OpenAI's Dall-E program to generate pictures which help them match an image to a given Kanji for
 image-based memorization. These pictures can then be loaded into the app to be viewed in the Kanji Pics tab.
 Learning Kanji is one the most laborious parts of learning Japanese, so this app aims to make it easier.
 
