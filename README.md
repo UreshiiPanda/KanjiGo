@@ -67,7 +67,7 @@ Learning Kanji is one the most laborious parts of learning Japanese, so this app
       ```
 5. A Nodemailer service is integrated with the contact form in the app. [Nodemailer](nodemailer.com) is a Node.js module
    which allows an app to send emails. This app is setup by default to generate and send emails to a fake
-   Ethereal email account, and the email link will be sent to you in an JS alert for viewing. Note that
+   Ethereal email account, and the email link will be sent to you in a JS alert for viewing. Note that
    nodemailer can also be setup to send emails to your personal email, this can be adjusted in the
    controller.mjs file.
    
