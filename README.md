@@ -28,8 +28,47 @@ Learning Kanji is one the most laborious parts of learning Japanese, so this app
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- GETTING STARTED -->
-## Getting Started:<br>
+
+<!-- GETTING STARTED WITH DOCKER -->
+## Getting Started With Docker:<br>
+
+0. If you already have Docker installed on your machine, then this app can be simply run with the
+   following instructions. The docker-compose.yml contains almost all of the Docker info needed
+   to understand the context in which the app runs, including: builds, ports, network, and volume
+   storage. The only exception to this are the environment variables which have been placed in a
+   .env file in order to protect sensitive keys like your OPENAI_API_KEY. The step for setting up your
+   local .env file is included below. Note that these environment variables can also be moved into
+   the docker-compose.yml file and more can be read about how to do that here:
+   [Docker Env Vars](https://docs.docker.com/compose/environment-variables/set-environment-variables/)
+
+1. Clone all project files into a root working directory.
+    ```sh
+        git clone https://github.com/UreshiiPanda/KanjiGo.git
+    ```
+2. Store environment variables by creating ```.env``` in that same root directory.<br>
+   Place your environment variables into this file. <br>
+      ```
+        port=8000
+        mongo_db_uri="mongodb://mongo:27017"
+        openai_api_key="place your API key here"
+      ```
+3. From that root directory, run docker compose:
+    ```sh
+        docker compose up
+    ```
+4. To stop the app, stop docker compose from another terminal:
+    ```sh
+        docker compose down
+    ```
+
+
+<br><br>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED WITHOUT DOCKER -->
+## Getting Started Without Docker:<br>
 
 1. Clone all project files into a root working directory.
     ```sh
@@ -55,13 +94,14 @@ Learning Kanji is one the most laborious parts of learning Japanese, so this app
    MongoDB connect string with your MongoDB credentials. <br>
       ```
         PORT=8000
-        MONGODB_CONNECT_STRING=mongodb+srv://<username>:<password>@cluster0.vj6fual.mongodb.net/?retryWrites=true&w=majority
+        MONGO_DB_URI=mongodb+srv://<username>:<password>@cluster0.vj6fual.mongodb.net/?retryWrites=true&w=majority
         OPENAI_API_KEY="place your API key here"
       ```
 
       NOTE:  The package.json on the frontend has a proxy setup by default, please adjust this
-             according to your own connection needs. Default ports are set to 8000 for
-             the backend, and 3000 for the frontend. <br>
+             according to your own connection needs. The proxy is currently setup to connect to a Docker
+             Container, so please change the proxy to the localhost proxy shown below in order to use it
+             without Docker. Default ports are set to 8000 for the backend, and 3000 for the frontend. <br>
       ```json
           "proxy": "http://localhost:8000"
       ```
