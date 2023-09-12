@@ -16,9 +16,9 @@ services:
     build:
       context: ./backend
       args:
-        mongo_db_uri: "mongodb://mongo:27017"
-        port: 8000
-        openai_api_key: "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"
+        mongo_db_uri: ${mongo_db_uri}
+        port: ${port}
+        openai_api_key: ${openai_api_key}
     container_name: express-server
     ports:
       - "8000:8000"
