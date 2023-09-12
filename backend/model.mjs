@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 import 'dotenv/config';
 
 
-// Connect to MongoDB Atlas cluster
+// Connect to MongoDB Docker Container or to MongoDB Atlas cluster
 mongoose.connect(
-    process.env.MONGODB_CONNECT_STRING,
+    process.env.MONGO_DB_URI,
     { useNewUrlParser: true }
 );
 
@@ -16,9 +16,9 @@ const kanji_db = mongoose.connection;
 // Confirm that the database has connected, print success to console
 kanji_db.once("open", (error) => {
     if (error) {
-        res.status(500).json( {Error: "Cannot connect to MongoDB Atlas."} );
+        res.status(500).json( {Error: "Cannot connect to MongoDB."} );
     } else {
-    console.log("Successfully connected to MongoDB Atlas using Mongoose.");
+    console.log("Successfully connected to MongoDB via Mongoose");
     }
 });
 

@@ -1,0 +1,46 @@
+version: "v2.20.2"
+
+services:
+
+  react-app:
+    build:
+      context: ./frontend
+    container_name: react-app
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - kanji-go
+
+  express-server: 
+    build:
+      context: ./backend
+      args:
+        mongo_db_uri: "mongodb://mongo:27017"
+        port: 8000
+        openai_api_key: "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"
+    container_name: express-server
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    networks:
+      - kanji-go
+
+  mongo:
+    image: mongo:latest
+    container_name: mongoDB
+    ports:
+      - "27017:27017"
+    networks:
+      - kanji-go
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  kanji-go:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local
