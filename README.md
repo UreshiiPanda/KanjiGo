@@ -20,8 +20,8 @@ Document in the DB. Users can create, edit, and delete Kanji in their own person
 also try out OpenAI's Dall-E program to generate pictures which help them match an image to a given Kanji for
 image-based memorization. Dall-E is still an awful AI model but it's kinda funny to see what it comes up with
 and the potential is there for this to be an effective Kanji learning method in the near future. 
-These pictures can then be loaded into the app to be viewed in the Kanji Pics tab. Some pictures have been pre-
-loaded into this app just for demo purposes. Learning Kanji is one the most laborious parts of learning Japanese, 
+These pictures can then be loaded into the app to be viewed in the Kanji Pics tab. Some pictures have been pre-loaded
+into this app just for demo purposes. Learning Kanji is one of the most laborious parts of learning Japanese, 
 so this app experiments with making it easier and more fun.
 
 
